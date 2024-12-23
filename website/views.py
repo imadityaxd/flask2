@@ -34,7 +34,8 @@ def home():
 def delete_note():
     # Parse the JSON data from the request
     note = json.loads(request.data)
-    noteId = note['note']  # Extract the note ID from the parsed data
+    print("delere req body", note)
+    noteId = note['noteId']  # Extract the note ID from the parsed data
     note = Note.query.get(noteId)  # Query the database for the note by its ID
 
     # Check if the note exists and belongs to the current user

@@ -6,7 +6,8 @@ function deleteNote(noteId) {
         body: JSON.stringify({ noteId: noteId }) // Convert the noteId into a JSON object and include it in the request body
     })
     .then((_res) => {
+        console.log("resposne: ", _res)
         // Once the response is received, redirect the user to the home page ('/')
-        window.location.href = "/";
+        // window.location.href = "/";
     });
 }
